@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domaci zadatak 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Naslov -->
+        <div class="row mt-3">
+            <div class="col text-center">
+                <h1>Filmovi</h1>
+            </div>
+        </div>
+
+        <!-- Tabela -->
+        <!-- Popunjava se iz JS -->
+        <div class="row mt-3">
+            <div class="col-10 offset-1">
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Odgledan</th>
+                            <th>Naziv</th>
+                            <th>Godina</th>
+                            <th>Drzava</th>
+                            <th>Napomena</th>
+                            <th>Glumci</th>
+                        </tr>
+                    </thead>
+                    <tbody id="filmovi_table_body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Dugme -->
+        <div class="row mt-3">
+            <div class="col text-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Dodaj Novi Film
+                  </button>
+                  <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Unos filma</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <form id="form" onsubmit="dodajFilm();return false">
+                                <input id='nazivInput' type="text" class="form-control mt-3" name="naziv" placeholder="Naziv" required>
+                                <input id='godinaInput' type="number" class="form-control mt-3" name="godina" placeholder="Godina">
+                                <input id='drzavaInput' type="text" class="form-control mt-3" name="drzava" placeholder="Drzava">
+                                <input id='napomenaInput' type="text" class="form-control mt-3" name="napomena" placeholder="Napomena">
+                                <input id='glumciInput' type="text" class="form-control mt-3" name="glumci" placeholder="Glumci" required>
+                                <button type="submit" class="btn btn-primary mt-3" >Add</button>
+                            </form>
+
+                            
+
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                  
+            </div>
+        </div>
+
+
+    </div>
+    
+
+
+
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
